@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+
+    <section class="section-menu-p d-flex">
+        <div class="col-2 menu-principal">
+            <nav class="navegacion">
+                <a href="#">Vender</a>
+                <a href="#">Ayuda</a>
+                <a href="#">Registro</a>
+                <a href="#">Iniciar Sesión</a>
+            </nav>
+        </div>
+    </section>
+
+    <div class="BackgroundMove">
+        <header id="header" class="header">
+            <div class="container">
+                <div class="row row-center">
+
+                    <div class="col-2">
+                        <div class="box-logo d-flex justify-center aling-center">
+                            <img id="logo" src="img/logo1.png">
+                        </div>
+                    </div>
+
+                    <div class="col-8">
+                        <div class="w-100 d-flex justify-left aling-center">
+                            <div class="contenido-hero">
+                                <form action="#" id="busqueda" method="post" class="formulario">
+                                    <input class="u-full-width" type="text" placeholder="Buscar productos"
+                                        id="buscador">
+                                    <input type="submit" id="submit-buscador" class="submit-buscador">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="submenu">
+                            <div class="box-car">
+                                <img src="img/carro-de-la-compra.png" id="img-carrito">
+                            </div>
+                            <div id="carrito" class="box-submenu">
+                                <div class="box-table">
+
+                                    <table id="lista-carrito" class="u-full-width">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th>Cantidad</th>
+                                                <th>Total</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Total Compra</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+
+                                    <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--LOGIN-->
+                        <div>
+                            <button id="abrir" class="open-button" onclick="openForm()">Login</button>
+                            <button id="cerrar"  onclick="cerrarsesion()">Logout</button>
+                            <div class="form-popup " id="myForm">
+                                <form class="form-container">
+                                <h2>Inicia Sesion</h2>
+                            
+                                <label for="email"><b>Usuario</b></label>
+                                <input id="usuario" type="text" placeholder="Enter Email" name="email" required>
+                            
+                                <label for="psw"><b>Contraseña</b></label>
+                                <input id="password" type="password" placeholder="Enter Password" name="psw" required>
+                            
+                                <button type="button" class="btn">Entrar</button>
+                                <button type="button" class="btn-cancel" onclick="closeForm()">Cerrar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <div id="hero"></div>
+        </section>
+
+    </div>
+
+    <!--   <div class="barra">
+        <div class="container">
+            <div class="row">
+                    <div class="four columns icono icono1">
+                        <p>20,000 Cursos en línea <br>
+                        Explora  los temas más recientes</p>
+                    </div>
+                    <div class="four columns icono icono2">
+                        <p>Instructores Expertos <br>
+                        Aprende con distintos estilos</p>
+                    </div>
+                    <div class="four columns icono icono3">
+                        <p>Acceso de por vida <br>
+                        Aprende a tu ritmo</p>
+                    </div>
+            </div>
+        </div>
+-->
+    </div>
+
+    <div id="lista-cursos" class="container">
+        <h1 id="encabezado" class="encabezado">Inventario</h1>
+
+        
+        
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/TopdeportivoparAMujer.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>Top deportivo</h4>
+                        <p class="precio">
+                            <span class="label-stock">Stock: 15</span>
+                            <span class="box-price">
+                                <span class="symbol-price">$</span>
+                                <span class="num-price u-pull-right ">30.000</span>
+                            </span>
+                        </p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="4">Añadir
+                            al carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/camisadeportiva.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>Polo deportivo</h4>
+                        <p class="precio">
+                            <span class="label-stock">Stock: 15</span>
+                            <span class="box-price">
+                                <span class="symbol-price">$</span>
+                                <span class="num-price u-pull-right ">45.000</span>
+                            </span>
+                        </p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="5">Añadir
+                            al carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/Sudadera3Rayas.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>Buso adidas</h4>
+                        <p class="precio">
+                            <span class="label-stock">Stock: 15</span>
+                            <span class="box-price">
+                                <span class="symbol-price">$</span>
+                                <span class="num-price u-pull-right ">15.000</span></span>
+                        </p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="6">Añadir
+                            al carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/TopdeportivoparAMujer.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>Comida Mexicana para principiantes</h4>
+                        <p class="precio">
+                            <span class="label-stock">Stock: 15</span>
+                            <span class="box-price">
+                                <span class="symbol-price">$</span>
+                                <span class="num-price u-pull-right ">25.000</span>
+                            </span>
+                        </p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="7">Añadir
+                            al carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/camisadeportiva.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>Estudio Musical en tu casa</h4>
+                        <p class="precio">
+                            <span class="label-stock">Stock: 15</span>
+                            <span class="box-price">
+                                <span class="symbol-price">$</span>
+                                <span class="num-price u-pull-right ">35.000</span>
+                            </span>
+                        </p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="8">Añadir
+                            al carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/Sudadera3Rayas.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>Cosecha tus propias frutas y verduras</h4>
+                        <p class="precio">
+                            <span class="label-stock">Stock: 15</span>
+                            <span class="box-price">
+                                <span class="symbol-price">$</span>
+                                <span class="num-price u-pull-right ">30.000</span>
+                            </span>
+                        </p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="9">Añadir
+                            al carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/TopdeportivoparAMujer.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>Prepara galletas caseras</h4>
+                        <p class="precio">
+                            <span class="label-stock">Stock: 15</span>
+                            <span class="box-price">
+                                <span class="symbol-price">$</span>
+                                <span class="num-price u-pull-right ">20.000</span></span>
+                        </p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="10">Añadir
+                            al carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/camisadeportiva.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>JavaScript Moderno con ES6</h4>
+                        <p class="precio">
+                            <span class="label-stock">Stock: 15</span>
+                            <span class="box-price">
+                                <span class="symbol-price">$</span>
+                                <span class="num-price u-pull-right ">80.000</span>
+                            </span>
+                        </p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="11">Añadir
+                            al carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/Sudadera3Rayas.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>100 Recetas de Comida Natural</h4>
+                        <p class="precio">
+                            <span class="label-stock">Stock: 15</span>
+                            <span class="box-price">
+                                <span class="symbol-price">$</span>
+                                <span class="num-price u-pull-right ">$65.000</span>
+                            </span>
+                        </p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="12">Añadir
+                            al carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/TopdeportivoparAMujer.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>Prepara galletas caseras</h4>
+                        <p class="precio">
+                            <span class="label-stock">Stock: 15</span>
+                            <span class="box-price">
+                                <span class="symbol-price">$</span>
+                                <span class="num-price u-pull-right ">20.000</span></span>
+                        </p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="10">Añadir
+                            al carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/camisadeportiva.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>JavaScript Moderno con ES6</h4>
+                        <p class="precio">
+                            <span class="label-stock">Stock: 15</span>
+                            <span class="box-price">
+                                <span class="symbol-price">$</span>
+                                <span class="num-price u-pull-right ">80.000</span>
+                            </span>
+                        </p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="11">Añadir
+                            al carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/Sudadera3Rayas.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>100 Recetas de Comida Natural</h4>
+                        <p class="precio">
+                            <span class="label-stock">Stock: 15</span>
+                            <span class="box-price">
+                                <span class="symbol-price">$</span>
+                                <span class="num-price u-pull-right ">$65.000</span>
+                            </span>
+                        </p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="12">Añadir
+                            al carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+
+    </div>
+
+    
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="four columns">
+                    <nav id="principal" class="menu">
+                        <a class="enlace" href="#">Para tu Negocio</a>
+                        <a class="enlace" href="#">Conviertete en Instructor</a>
+                        <a class="enlace" href="#">Aplicaciones Móviles</a>
+                        <a class="enlace" href="#">Soporte</a>
+                        <a class="enlace" href="#">Temas</a>
+                    </nav>
+                </div>
+                <div class="four columns">
+                    <nav id="secundaria" class="menu">
+                        <a class="enlace" href="#">¿Quienes Somos?</a>
+                        <a class="enlace" href="#">Empleo</a>
+                        <a class="enlace" href="#">Blog</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

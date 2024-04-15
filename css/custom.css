@@ -1,0 +1,423 @@
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: #f5f3f3
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 16px;
+    font-weight: 700;
+}
+header {
+    padding: 20px 0 20px 0;
+    background: white;
+    text-align: center;
+}
+@media (min-width: 750px) {
+    header {
+        text-align: left;
+    }
+}
+.borrar {
+    background-color: rgb(11, 231, 243);
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+ul {
+    list-style: none;
+}
+#hero {
+    background-image:url(../img/BackgroundImage.webp); 
+    height: 350px;
+    background-size: cover;
+}
+#encabezado {
+    margin: 30px 0;
+}
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right:0;
+    top:100%;
+    z-index: 1;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 500px;
+}
+
+.vacio {
+    padding: 10px;
+    background-color: crimson;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+
+.contenido-hero {
+    color: #f5f3f3;
+    max-width: 461px;
+    width: 100%;
+  }
+.contenido-hero form {
+    position: relative;
+    margin-bottom: 0;
+}
+.contenido-hero form #buscador {
+    height: 50px;
+    margin-bottom: 0;
+    color: black;
+    border-radius: 100px;
+}
+
+.contenido-hero form .submit-buscador {
+    position: absolute;
+    right:0;
+    top:0;
+    height: 100%;
+    padding: 0;
+    display: block;
+    text-indent: -9999px;
+    width: 50px;
+    background-image: url(../img/lupa.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    border:none;
+}
+
+
+.barra {
+    padding: 20px 0;
+    background: #741d51; /* Old browsers */
+    background: -moz-linear-gradient(left, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #741d51 0%,#e44e52 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */
+}
+
+.barra p {
+    margin:0;
+    color: white;
+}
+.icono {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 60px;
+    background-size: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+@media (min-width: 750px) {
+    .icono {
+        margin-bottom:0;
+    }
+}
+.icono1 {
+    background-image: url(../img/icono1.png);
+}
+.icono2 {
+    background-image: url(../img/icono2.png);
+}
+.icono3 {
+    background-image: url(../img/icono3.png);
+}
+
+#lista-cursos .row {
+    margin-bottom:20px;
+}
+.agregar-carrito {
+    margin:10px 0;
+}
+
+.card {
+    text-align: center;
+    border: 1px solid #e1e1e1;
+    background: white;
+}
+@media (min-width: 550px) {
+    .card {
+        text-align: left;
+    }
+}
+.info-card  {
+    padding: 10px 20px;
+}
+
+.info-card p, 
+.card h4 {
+    margin-bottom: 5px;
+}
+.info-card .precio {
+    font-size: 18px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.info-card .precio .box-price {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+
+.footer {
+    margin-top: 40px;
+    border-top:1px solid #aaa;;
+    padding-top: 40px;   
+}
+.footer .menu a{
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.row-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.aling-center {
+    align-items: center;
+}
+
+.justify-left {
+    justify-content: start;
+}
+
+.box-logo {
+    width: 77px;
+    height: 77px;
+}
+
+.box-logo #logo {
+    width: 100%;
+}
+
+.box-table {
+    background-color: #fff;
+    padding: 15px;
+}
+
+.box-car {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #f2f0f0;
+    padding: 8px;
+    box-shadow: 0px 0px 4px 1px #575757;
+}
+
+.box-car #img-carrito {
+    width: 40px;
+}
+
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 0px 0px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: absolute;
+  bottom: 14%;
+  right: 19%;
+  width: 117px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 40%;
+  border: 3px;
+  z-index: 9;
+  top: 11%;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 30px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submitfunction openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 0px 0px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .btn-cancel {
+  background-color: red;
+  color: white;
+  padding: 0px 0px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+#cerrar {
+    display: none;
+    background-color: #555;
+    color: white;
+    padding: 0px 0px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: absolute;
+    bottom: 14%;
+    right: 19%;
+    width: 117px;
+  }
+
+
+
+/*/MENU/*/
+.navegacion a{
+    color: var(--claro);
+    text-decoration: none;
+    margin-right: 1rem;
+}
+.navegacion a:last-of-type {
+    margin-right: 0;
+}
+
+.menu-principal {
+    margin: auto;
+    padding: 12px;
+}
+
+.section-menu-p {
+    justify-content: center;
+    position: relative;
+    background-color: white;
+}
